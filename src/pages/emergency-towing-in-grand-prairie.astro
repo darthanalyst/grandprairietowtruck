@@ -1,0 +1,45 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+const props = {
+  name: "Emergency Towing",
+  serviceType: "Emergency towing",
+  slug: "/emergency-towing-in-grand-prairie/",
+  klass: "Emergency",
+  title: "Emergency Towing in Grand Prairie, TX | 24/7 Fast Dispatch",
+  description: "Stuck or stranded in Grand Prairie, TX? Call for fast 24/7 emergency towing on I-20, I-30, and SH-360. Nearest truck dispatched, upfront price, any hour.",
+  h1: "Emergency Towing in Grand Prairie, <em>TX</em>",
+  lead: "Broken down or in a wreck right now? One call gets the nearest tow truck moving toward you, any hour, with an honest arrival time.",
+  heroImg: "/images/hero-emergency.webp",
+  sections: [
+    { h2: "Help When the Day Goes Sideways", paras: [
+      "An emergency on the road does not wait for business hours. A car dies in the middle of Pioneer Parkway, a tire blows on I-20 near the industrial district, or a fender-bender on SH-360 leaves a vehicle blocking a lane. In those minutes the only thing that matters is getting a truck moving, fast. Call and a live dispatcher answers, pulls up the nearest available operator, and sends help to your exact location across Grand Prairie and the 75050 area.",
+      "Emergency towing is about speed and calm. You get a real person on the phone instead of a queue, a straight answer on how long the wait will be, and a price before the truck rolls. While you wait somewhere safe, you know exactly what is coming.",
+    ]},
+    { h2: "When to Call for an Emergency Tow", paras: [
+      "Some situations should not wait for a scheduled appointment. Call right away when any of these describe your day:",
+    ], bullets: [
+      "A breakdown in a live traffic lane on I-20, I-30, or SH-360",
+      "A collision that left a vehicle undriveable or unsafe to move",
+      "A car stalled at a busy intersection like Carrier Parkway or Belt Line Road",
+      "A blowout or mechanical failure with traffic moving fast nearby",
+      "Any moment where you feel unsafe waiting on the shoulder",
+    ]},
+    { h2: "Staying Safe Until the Truck Arrives", paras: [
+      "The minutes between the call and the truck are when most of the risk sits. If you are stopped in or near traffic, switch on your hazard lights so other drivers see you early. If it is safe, ease the vehicle onto the shoulder or off the road. If traffic is heavy and fast, the safest place is often buckled inside with the doors locked, away from the traffic side. Stay on the line and the dispatcher walks you through it until help is close.",
+      "Once the operator arrives, let them handle the loading. Standing clear of the vehicle and the road keeps you safe while they work. For collision scenes, our <a href='/accident-recovery-in-grand-prairie/'>accident recovery</a> page covers careful cleanup and loading, and <a href='/roadside-assistance-in-grand-prairie/'>roadside assistance</a> covers the smaller stuff like a jump or a flat.",
+    ]},
+  ],
+  faqs: [
+    { q: "How fast can an emergency tow truck reach me?", a: "The nearest available truck is dispatched the moment you call, and you get an honest arrival window for your exact spot. Across Grand Prairie and the 75050 area that often lands around 15 to 25 minutes, depending on traffic, weather, and where you are." },
+    { q: "Are you available in the middle of the night?", a: "Yes. A dispatcher answers 24 hours a day, including nights, weekends, and holidays, and a truck can roll any hour. Emergencies rarely happen at a convenient time, which is the whole reason round-the-clock dispatch exists." },
+    { q: "What does an emergency tow cost?", a: "It depends on the distance, the vehicle, and the service needed. You get a clear quote on the phone before a truck is dispatched, so there are no surprises when the vehicle comes off the truck." },
+    { q: "Can you reach me on the highway?", a: "Yes. Operators are dispatched to the interstates and state highways that thread Grand Prairie, including I-20, I-30, SH-360, and the President George Bush Turnpike. Give the dispatcher your direction of travel and the nearest exit or mile marker." },
+  ],
+  related: [
+    { name: "Accident Recovery", url: "/accident-recovery-in-grand-prairie/", icon: "i-shield", tag: "Recovery", blurb: "Collision cleanup, careful loading, and a tow to the body shop you choose." },
+    { name: "Roadside Assistance", url: "/roadside-assistance-in-grand-prairie/", icon: "i-battery", tag: "Roadside", blurb: "Jump starts, lockouts, flat-tire changes, and fuel delivery." },
+    { name: "Flatbed Towing", url: "/flatbed-towing-in-grand-prairie/", icon: "i-flatbed", tag: "Specialty", blurb: "Damage-free transport for lowered, AWD, and non-running vehicles." },
+  ],
+};
+---
+<ServicePage {...props} />

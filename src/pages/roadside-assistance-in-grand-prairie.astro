@@ -1,0 +1,45 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+const props = {
+  name: "Roadside Assistance",
+  serviceType: "Roadside assistance",
+  slug: "/roadside-assistance-in-grand-prairie/",
+  klass: "Roadside",
+  title: "Roadside Assistance in Grand Prairie, TX | 24/7 Help",
+  description: "Roadside assistance in Grand Prairie, TX: jump starts, lockouts, flat-tire changes, and fuel delivery. Call 24/7 for fast help and an upfront price.",
+  h1: "Roadside Assistance in Grand Prairie, <em>TX</em>",
+  lead: "Not every problem needs a tow. A jump, a lockout, a flat, or a splash of fuel can get you rolling again without leaving the spot.",
+  heroImg: "/images/hero-roadside.webp",
+  sections: [
+    { h2: "Quick Fixes That Skip the Tow", paras: [
+      "A lot of roadside trouble is solvable right where you are. A dead battery needs a jump, not a flatbed. Keys locked in the car need a careful entry, not a wrecker. A flat needs the spare mounted or the car moved to a shop. Roadside assistance covers the everyday problems that strand you without a full tow, and it is usually faster and cheaper than one.",
+      "Call and tell the dispatcher what happened. If a quick fix will get you moving, an operator is sent with the right gear. If the problem turns out to be bigger, the same call turns into a tow, so you are never starting over.",
+    ]},
+    { h2: "What Roadside Assistance Covers", paras: [
+      "One number handles the common ways a day on the road goes wrong:",
+    ], bullets: [
+      "Jump starts for a dead or drained battery",
+      "Lockout service when the keys are inside the car",
+      "Flat-tire changes using your spare, or a tow if there is no spare",
+      "Fuel delivery when the tank runs dry",
+      "A quick assessment when you are not sure what is wrong",
+    ]},
+    { h2: "Stranded in a Parking Lot or on the Shoulder", paras: [
+      "Roadside calls come from everywhere around Grand Prairie: a battery that will not turn over at the Premium Outlets, keys locked in the car at Epic Waters, a flat on the way home down Great Southwest Parkway. Wherever you are, give the dispatcher the location and the problem and an operator heads out with an honest arrival window and an upfront price.",
+      "If it turns out the vehicle needs to move after all, the call rolls straight into <a href='/light-duty-towing-in-grand-prairie/'>light-duty towing</a> or a <a href='/flatbed-towing-in-grand-prairie/'>flatbed</a> for a lowered or non-running car. One call, whichever way it goes.",
+    ]},
+  ],
+  faqs: [
+    { q: "Can you jump-start my car where it sits?", a: "Yes. An operator comes to your location with the gear to jump a dead or drained battery and get you running again. If the battery will not hold and the car needs a shop, the same call becomes a tow." },
+    { q: "I locked my keys in the car. Can you help?", a: "Yes. Lockout service uses the right tools to open the door without damaging the vehicle. Be ready to show that the car is yours, and an operator can get you back in." },
+    { q: "Do you bring fuel if I run out?", a: "Yes. Fuel delivery brings enough to get you to a station. Tell the dispatcher whether the vehicle takes gas or diesel so the operator brings the right fuel." },
+    { q: "What if the problem is bigger than it looked?", a: "No problem. If a jump or a tire change will not solve it, the same call turns into a tow with the right truck, so you do not have to start over with a second phone call." },
+  ],
+  related: [
+    { name: "Light-Duty Towing", url: "/light-duty-towing-in-grand-prairie/", icon: "i-car", tag: "Light", blurb: "Cars, SUVs, and pickups towed on a wheel-lift or flatbed." },
+    { name: "Emergency Towing", url: "/emergency-towing-in-grand-prairie/", icon: "i-crash", tag: "Emergency", blurb: "A breakdown or wreck gets the nearest truck dispatched fast." },
+    { name: "Flatbed Towing", url: "/flatbed-towing-in-grand-prairie/", icon: "i-flatbed", tag: "Specialty", blurb: "Damage-free transport for lowered, AWD, and non-running vehicles." },
+  ],
+};
+---
+<ServicePage {...props} />

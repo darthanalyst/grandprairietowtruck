@@ -1,0 +1,46 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+const props = {
+  name: "Flatbed Towing",
+  serviceType: "Flatbed towing",
+  slug: "/flatbed-towing-in-grand-prairie/",
+  klass: "Specialty",
+  title: "Flatbed Towing in Grand Prairie, TX | Damage-Free Transport",
+  description: "Flatbed towing in Grand Prairie, TX for lowered, AWD, classic, and non-running vehicles. No road contact, no drivetrain strain. Call 24/7 for an upfront quote.",
+  h1: "Flatbed Towing in Grand Prairie, <em>TX</em>",
+  lead: "Some vehicles should never be dragged on two wheels. A flatbed carries yours flat and secure, with zero road contact, start to finish.",
+  heroImg: "/images/hero-flatbed.webp",
+  sections: [
+    { h2: "When a Flatbed Is the Right Call", paras: [
+      "A flatbed, also called a rollback, is the safest way to move a vehicle that cannot or should not roll on its own wheels. The bed tilts down to the road, the vehicle is winched on, and it rides flat the whole way. Nothing drags, nothing scrapes, and the drivetrain takes no strain. For a lot of cars around Grand Prairie, that is the only correct way to tow.",
+      "Tell the dispatcher what you are driving and a flatbed is sent when the job calls for one. It is the default for anything low, all-wheel-drive, or not running.",
+    ]},
+    { h2: "Vehicles That Belong on a Flatbed", paras: [
+      "A flatbed is the right answer far more often than people expect. Ask for one when you have:",
+    ], bullets: [
+      "Lowered cars and sports cars with little ground clearance",
+      "All-wheel-drive and four-wheel-drive vehicles that can be damaged by a wheel-lift",
+      "Classic, collector, and show cars you do not want touched",
+      "Non-running vehicles that cannot be steered or braked",
+      "EVs and newer vehicles the manufacturer says to flat-tow only",
+      "Vehicles with serious front or rear damage after a collision",
+    ]},
+    { h2: "Careful Loading, Honest Pricing", paras: [
+      "Loading a vehicle on a flatbed the right way takes care, not just equipment. The operator sets the approach so the bumper clears, uses soft straps or wheel nets where they belong, and secures the vehicle at four points so it does not shift on the road. For a lowered or collector car, that attention is the whole reason you called for a flatbed instead of a hook.",
+      "You get an upfront price on the phone, based on the distance, the vehicle, and where it is going. Whether it is a short hop to a shop off Carrier Parkway or a longer haul across the metroplex, you hear the number first. For vehicles that are simply dead rather than damaged, <a href='/light-duty-towing-in-grand-prairie/'>light-duty towing</a> may be all you need, and a quick <a href='/roadside-assistance-in-grand-prairie/'>roadside assistance</a> call can solve a no-start without a tow at all.",
+    ]},
+  ],
+  faqs: [
+    { q: "Why is a flatbed better for my lowered car?", a: "A lowered car has so little clearance that a traditional wheel-lift can scrape the bumper or undercarriage. A flatbed brings the deck down to the road and carries the car flat with no road contact, which protects the body kit, the exhaust, and the drivetrain." },
+    { q: "Do all-wheel-drive vehicles need a flatbed?", a: "Usually, yes. Towing an all-wheel-drive or four-wheel-drive vehicle with two wheels on the ground can damage the transmission and differentials. A flatbed lifts all four wheels off the road, which is the safe way to move it." },
+    { q: "Can you flatbed a car that will not start or steer?", a: "Yes. A non-running vehicle is winched onto the bed, so it does not need to start, steer, or brake. Let the dispatcher know the vehicle is dead so the operator brings the right gear." },
+    { q: "Is flatbed towing more expensive?", a: "Pricing depends on the distance, the vehicle, and the service, not just the truck type. You get a clear quote on the phone before anything rolls, so you can decide with the number in hand." },
+  ],
+  related: [
+    { name: "Light-Duty Towing", url: "/light-duty-towing-in-grand-prairie/", icon: "i-car", tag: "Light", blurb: "Cars, SUVs, and pickups towed on a wheel-lift or flatbed." },
+    { name: "Long-Distance Towing", url: "/long-distance-towing-in-grand-prairie/", icon: "i-route", tag: "Long-Haul", blurb: "Out-of-town hauls across Texas, quoted upfront and secured." },
+    { name: "Accident Recovery", url: "/accident-recovery-in-grand-prairie/", icon: "i-shield", tag: "Recovery", blurb: "Collision cleanup, careful loading, and a tow to your shop." },
+  ],
+};
+---
+<ServicePage {...props} />
