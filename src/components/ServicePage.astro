@@ -1,0 +1,91 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE, serviceNode, breadcrumb, faqNode } from "../lib/site.js";
+const {
+  name, serviceType, slug, klass = "Service", title, description,
+  h1, lead, heroImg = "/images/hero-home.webp",
+  sections = [], faqs = [], related = [],
+} = Astro.props;
+const tel = "tel:" + SITE.phoneTel;
+const heroAlt = `${name} in Grand Prairie, TX, 24/7 tow truck dispatch`;
+const schema = [
+  serviceNode({ name: `${name} in Grand Prairie, TX`, serviceType, description, url: slug }),
+  breadcrumb([
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services/" },
+    { name, url: slug },
+  ]),
+];
+if (faqs.length) schema.push(faqNode(faqs));
+---
+<Base title={title} description={description} path={slug} schema={schema}>
+  <div class="wrap"><nav class="crumbs"><a href="/">Home</a> / <a href="/services/">Services</a> / {name}</nav></div>
+
+  <section class="hero solo">
+    <img class="hero-img" src={heroImg} alt={heroAlt} width="1600" height="900" loading="eager" decoding="async" />
+    <span class="hero-scrim" aria-hidden="true"></span>
+    <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span> {klass} · Grand Prairie, TX</span>
+    <h1 set:html={h1} />
+    <p class="lead">{lead}</p>
+    <div class="cta-row">
+      <a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a>
+      <a class="btn btn-ghost btn-lg" href="/contact/">Request a callback</a>
+    </div>
+    <div class="chips">
+      <span class="chip"><svg><use href="#i-clock"/></svg> Open 24/7</span>
+      <span class="chip"><svg><use href="#i-shield"/></svg> Licensed &amp; insured operators</span>
+      <span class="chip"><svg><use href="#i-pin"/></svg> Grand Prairie &amp; 75050</span>
+    </div>
+  </div></section>
+
+  <div class="readout"><div class="wrap">
+    <div class="read-cell"><span class="k">Dispatch</span><span class="v"><em>24/7</em></span></div>
+    <div class="read-cell"><span class="k">Typical arrival</span><span class="v">~25 min</span></div>
+    <div class="read-cell"><span class="k">Service</span><span class="v">Grand Prairie</span></div>
+    <div class="read-cell"><span class="k">Pricing</span><span class="v">Upfront</span></div>
+  </div></div>
+
+  {sections.map((sec, i) => (
+    <section class={i % 2 === 1 ? "bg-paper2" : undefined}><div class="wrap narrow">
+      <div class="section-head"><h2>{sec.h2}</h2></div>
+      <div class="prose">
+        {sec.paras.map((p) => <p set:html={p} />)}
+        {sec.bullets && <ul class="checks">{sec.bullets.map((b) => <li><svg><use href="#i-check"/></svg> <span set:html={b} /></li>)}</ul>}
+      </div>
+    </div></section>
+  ))}
+
+  {faqs.length > 0 && (
+    <section class={sections.length % 2 === 1 ? undefined : "bg-paper2"}><div class="wrap narrow">
+      <div class="section-head"><span class="eyebrow">FAQ</span><h2>{name} Questions</h2></div>
+      <div class="faq">
+        {faqs.map((f, i) => (
+          <details open={i === 0}><summary>{f.q}</summary><div class="ans"><p set:html={f.a} /></div></details>
+        ))}
+      </div>
+    </div></section>
+  )}
+
+  {related.length > 0 && (
+    <section><div class="wrap">
+      <div class="section-head"><span class="eyebrow">Related help</span><h2>More Ways We Help</h2></div>
+      <div class="fleet">
+        {related.map((r) => (
+          <a class="svc-card" href={r.url}>
+            <div class="svc-top"><span class="svc-ic"><svg><use href={"#" + r.icon}/></svg></span><span class="svc-tag">{r.tag}</span></div>
+            <h3>{r.name}</h3><p>{r.blurb}</p>
+            <span class="more">View service <svg><use href="#i-arrow"/></svg></span>
+          </a>
+        ))}
+      </div>
+    </div></section>
+  )}
+
+  <section class="callband"><div class="wrap">
+    <h2>{`Need ${name}? Call Now.`}</h2>
+    <div class="num"><a href={tel}>{SITE.phoneDisplay}</a></div>
+    <p>Open 24 hours · Grand Prairie, TX 75050 / 75051 / 75052</p>
+    <div style="margin-top:18px"><a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call Now</a></div>
+  </div></section>
+</Base>
