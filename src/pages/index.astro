@@ -1,0 +1,182 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE, SERVICES, AREAS, CORRIDORS, itemListNode, faqNode } from "../lib/site.js";
+const tel = "tel:" + SITE.phoneTel;
+const classes = [
+  { tag:"Light-duty", icon:"i-car", name:"Cars, SUVs & Pickups", blurb:"Daily drivers on a wheel-lift or flatbed, loaded carefully and towed where you need.", url:"/light-duty-towing-in-grand-prairie/" },
+  { tag:"Heavy-duty", icon:"i-truck", name:"Box Trucks & Rigs", blurb:"Bigger jobs out of the Great Southwest district handled with the right heavy wrecker.", url:"/heavy-duty-towing-in-grand-prairie/" },
+  { tag:"Specialty", icon:"i-flatbed", name:"Lowered, AWD & Dead", blurb:"Lowered, all-wheel-drive, classic, and non-running vehicles ride flat with no road contact.", url:"/flatbed-towing-in-grand-prairie/" },
+  { tag:"Recovery", icon:"i-crash", name:"Wrecks & Winch-Outs", blurb:"Collision recovery and vehicles stuck off the road, cleared and loaded by hand.", url:"/accident-recovery-in-grand-prairie/" },
+];
+const cov = [
+  { name:"Grand Prairie", url:"/grand-prairie-tx/", eta:"~15 min" },
+  { name:"Arlington", url:"/arlington-tx/", eta:"~18 min" },
+  { name:"Irving", url:"/irving-tx/", eta:"~20 min" },
+  { name:"Mansfield", url:"/mansfield-tx/", eta:"~25 min" },
+  { name:"Cedar Hill", url:"/cedar-hill-tx/", eta:"~24 min" },
+];
+const faqs = [
+  { q:"How fast can a tow truck reach me in Grand Prairie?", a:"It depends on traffic, weather, and where you are, but the nearest available truck is dispatched the moment you call and you get an honest arrival window for your exact spot. Across Grand Prairie and the 75050 area that often lands around 15 to 25 minutes." },
+  { q:"Are you really available 24 hours?", a:"Yes. A dispatcher answers nights, weekends, and holidays, and a truck can roll any hour. Most tows happen at the worst possible time, so round-the-clock dispatch is the whole point." },
+  { q:"How much does a tow cost?", a:"Cost depends on the distance, the vehicle, and the type of service. You get a clear quote on the phone before a truck is dispatched, so you hear the number first and then decide. No surprise fees when the vehicle comes off the truck." },
+  { q:"Can you tow a heavy or commercial vehicle?", a:"Yes. Along with cars and SUVs, the network covers box trucks, buses, and loaded commercial rigs common around the Great Southwest Industrial District, matched with a heavy-duty wrecker for the weight. Tell dispatch what you are driving and the right truck is sent." },
+  { q:"Do you tow long distance from Grand Prairie?", a:"Yes. Short hops across town, runs anywhere in the DFW metroplex, and longer out-of-town hauls across Texas. Tell the dispatcher the destination and the haul is quoted upfront." },
+  { q:"Which nearby cities do you cover?", a:"Coverage runs across Arlington, Irving, Mansfield, and Cedar Hill, with a dedicated page for each so you can read the local details, plus the wider mid-cities area between Dallas and Fort Worth." },
+];
+const schema = [ itemListNode(SERVICES), faqNode(faqs) ];
+---
+<Base
+  title="Tow Truck in Grand Prairie, TX | 24/7 Towing & Recovery"
+  description="Need a tow truck in Grand Prairie, TX? Call for fast 24/7 light, heavy, flatbed, and accident-recovery towing plus roadside help across the 75050 area and the I-20 / I-30 / SH-360 corridors."
+  path="/"
+  schema={schema}
+>
+  <section class="hero">
+    <img class="hero-img" src="/images/hero-home.webp" alt="Flatbed tow truck ready for 24/7 towing and recovery in Grand Prairie, TX" width="1600" height="900" loading="eager" decoding="async" />
+    <span class="hero-scrim" aria-hidden="true"></span>
+    <div class="wrap"><div class="hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> 24/7 dispatch · Grand Prairie 75050</span>
+      <h1>Tow Truck in Grand Prairie, <em>TX</em></h1>
+      <p class="lead">Broken down on I-20, blocked in, or in a wreck on SH-360? One call puts the right truck on the way, day or night, anywhere across Grand Prairie.</p>
+      <div class="cta-row">
+        <a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a>
+        <a class="btn btn-ghost btn-lg" href="#services">See all services</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><svg><use href="#i-clock"/></svg> Open 24 hours</span>
+        <span class="chip"><svg><use href="#i-bolt"/></svg> Fast local response</span>
+        <span class="chip"><svg><use href="#i-shield"/></svg> Licensed &amp; insured</span>
+      </div>
+    </div>
+    <div class="board" aria-label="Dispatch coverage board">
+      <div class="board-head">
+        <span class="t"><span class="dot"></span> Dispatch Coverage</span>
+        <span class="live">Grand Prairie, TX · 24/7</span>
+      </div>
+      {CORRIDORS.map((c) => (
+        <div class="board-row">
+          <span class="road">{c.road}</span>
+          <span class="note">{c.note}</span>
+          <span class="stat"><i></i> Covered</span>
+        </div>
+      ))}
+      <div class="board-foot">
+        <span class="bf-k">One call, any hour</span>
+        <a href={tel}>{SITE.phoneDisplay}</a>
+      </div>
+    </div>
+  </div></div></section>
+
+  <div class="corridor-strip"><div class="wrap">
+    <b>Corridors:</b>
+    <span>I-20</span><span class="sep">◆</span><span>I-30</span><span class="sep">◆</span><span>SH-360</span><span class="sep">◆</span><span>SH-161 / PGBT</span><span class="sep">◆</span><span>SH-303 Pioneer</span><span class="sep">◆</span><span>Belt Line Rd</span>
+  </div></div>
+
+  <div class="readout"><div class="wrap">
+    <div class="read-cell"><span class="k">Dispatch</span><span class="v"><em>24/7</em></span></div>
+    <div class="read-cell"><span class="k">Typical arrival</span><span class="v">~20 min</span></div>
+    <div class="read-cell"><span class="k">Coverage</span><span class="v">GP + 4</span></div>
+    <div class="read-cell"><span class="k">Pricing</span><span class="v">Upfront</span></div>
+  </div></div>
+
+  <section><div class="wrap">
+    <div class="section-head"><span class="eyebrow">By weight class</span><h2>The Right Truck for What You Drive</h2><p>Towing is not one-size-fits-all. Tell dispatch what you are driving and what happened, and the matching truck and operator head out.</p></div>
+    <div class="classlane">
+      {classes.map((c) => (
+        <a class="class-card" href={c.url}>
+          <span class="cc-tag">{c.tag}</span>
+          <span class="cc-ic"><svg><use href={"#" + c.icon}/></svg></span>
+          <h3>{c.name}</h3><p>{c.blurb}</p>
+          <span class="more">View service <svg><use href="#i-arrow"/></svg></span>
+        </a>
+      ))}
+    </div>
+  </div></section>
+
+  <section id="services" class="bg-paper2"><div class="wrap">
+    <div class="section-head"><span class="eyebrow">Services</span><h2>One Number, Every Kind of Tow</h2><p>From a sedan that will not start to a box truck off the shoulder, one call sorts it. Here is what the local network handles around Grand Prairie.</p></div>
+    <div class="fleet">
+      {SERVICES.map((s) => (
+        <a class="svc-card" href={s.url}>
+          <div class="svc-top"><span class="svc-ic"><svg><use href={"#" + s.icon}/></svg></span><span class="svc-tag">{s.klass}</span></div>
+          <h3>{s.name}</h3>
+          <p>{s.blurb}</p>
+          <span class="more">View service <svg><use href="#i-arrow"/></svg></span>
+        </a>
+      ))}
+    </div>
+  </div></section>
+
+  <section><div class="wrap narrow">
+    <div class="section-head"><span class="eyebrow">24/7 towing in Grand Prairie, TX</span><h2>The Tow Truck Grand Prairie Counts On</h2></div>
+    <div class="prose">
+    <p>A breakdown never picks a good moment. You might be stalled on I-20 near the Great Southwest Industrial District, blocked in on Pioneer Parkway during the after-work rush, or pulled onto the shoulder of SH-360 with a flat. Grand Prairie Tow Truck exists for exactly those moments. Call any hour and a dispatcher answers with a real voice, sends the nearest available operator, and gives you an honest arrival time for your exact spot across Grand Prairie and the surrounding 75050, 75051, and 75052 area.</p>
+    <p>This is towing built for how Grand Prairie actually drives. The city stretches a long way north to south, from the lakes and neighborhoods near Joe Pool Lake and Lynn Creek, up through the residential blocks off Carrier Parkway and Belt Line Road, into one of the largest industrial and warehouse districts in the country between here and Arlington. That mix means the right answer is rarely the same twice. A lowered car needs a flatbed. A loaded box truck needs a heavy-duty wrecker. A dead battery in a Lone Star Park or Traders Village parking lot just needs a jump. Describe the situation and the dispatcher matches the truck to the job, so one call sorts it instead of three.</p>
+    <p>Speed is the whole point, and so is being straight with you. You get a clear quote on the phone before a truck rolls, based on the distance, the vehicle, and the service, with no vague estimate that balloons at drop-off. While you wait somewhere safe, you know what is coming and roughly when. If you need a specific service, read about <a href="/flatbed-towing-in-grand-prairie/">flatbed towing</a> for lowered and non-running vehicles, <a href="/accident-recovery-in-grand-prairie/">accident recovery</a> after a collision, or <a href="/roadside-assistance-in-grand-prairie/">roadside assistance</a> for a jump, a flat, a lockout, or fuel. That mix of a fast local tow and an honest number is why drivers around Grand Prairie keep the line saved in their phone.</p>
+    </div>
+  </div></section>
+
+  <section class="bg-ink"><div class="wrap">
+    <div class="section-head"><span class="eyebrow">How a tow call works</span><h2>From Call to Hook-Up in Three Steps</h2></div>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h3>Call dispatch</h3><p>Tap to call. Tell us where you are and what you are driving. A live person answers, any hour, and pulls up the nearest truck.</p></div>
+      <div class="step"><div class="num">02</div><h3>Truck rolls out</h3><p>The closest available operator heads your way with the right equipment, and you get an honest arrival window plus an upfront price.</p></div>
+      <div class="step"><div class="num">03</div><h3>Loaded &amp; towed</h3><p>Your vehicle is secured and towed to the shop, dealer, or address you choose. No surprise fees when it comes off the truck.</p></div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="section-head"><span class="eyebrow">Coverage</span><h2>Fast Across the Mid-Cities</h2><p>Based in Grand Prairie and reaching across the corridors that thread the metroplex between Dallas and Fort Worth. Arrival windows are typical estimates and vary with traffic and weather.</p></div>
+    <div class="coverage-wrap">
+      <div class="corrboard">
+        <div class="ch">Freight &amp; commuter corridors covered</div>
+        {CORRIDORS.map((c) => (
+          <div class="crow"><span class="rd">{c.road}</span><span class="nt">{c.note}</span></div>
+        ))}
+        <div class="crow"><span class="rd">Belt Line Rd</span><span class="nt">Cross-town arterial</span></div>
+      </div>
+      <ul class="cov-list">
+        {cov.map((c) => (
+          <li class="cov-town"><a href={c.url}>{c.name}, TX</a><span class="eta"><svg><use href="#i-clock"/></svg> {c.eta}</span></li>
+        ))}
+      </ul>
+    </div>
+  </div></section>
+
+  <section class="bg-paper2"><div class="wrap"><div class="feature">
+    <div>
+      <span class="eyebrow">Why drivers call us</span>
+      <h2>Built for the Worst Moment of Your Day</h2>
+      <p>A breakdown is stressful enough without a runaround. The promise is simple: pick up fast, quote you straight, and get a truck moving toward you.</p>
+      <ul class="checks">
+        <li><svg><use href="#i-check"/></svg> A live dispatcher answers every call, day or night</li>
+        <li><svg><use href="#i-check"/></svg> Light, heavy, and flatbed trucks for the right job</li>
+        <li><svg><use href="#i-check"/></svg> Licensed, insured operators who handle your vehicle with care</li>
+        <li><svg><use href="#i-check"/></svg> Upfront pricing before any truck is dispatched</li>
+        <li><svg><use href="#i-check"/></svg> Fast response across Grand Prairie and the 75050 corridors</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Stopped on a busy road?</h3>
+      <p>If you are stuck on I-20, I-30, or SH-360, switch on your hazards and stay buckled inside if traffic is heavy and fast. Call and stay on the line. The dispatcher talks you through it until the truck is close.</p>
+      <a class="btn btn-call btn-block" href={tel} style="margin-top:16px"><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a>
+    </div>
+  </div></div></section>
+
+  <section><div class="wrap narrow">
+    <div class="section-head"><span class="eyebrow">FAQ</span><h2>Quick Answers</h2></div>
+    <div class="faq">
+      {faqs.map((f, i) => (
+        <details open={i === 0}><summary>{f.q}</summary><div class="ans"><p>{f.a}</p></div></details>
+      ))}
+    </div>
+  </div></section>
+
+  <section class="callband"><div class="wrap">
+    <h2>One Call Puts a Truck on the Way</h2>
+    <div class="num"><a href={tel}>{SITE.phoneDisplay}</a></div>
+    <p>Open 24 hours · Serving Grand Prairie, TX &amp; the 75050 / 75051 / 75052 area</p>
+    <div style="margin-top:18px"><a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call Now</a></div>
+  </div></section>
+</Base>
