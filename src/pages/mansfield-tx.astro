@@ -1,0 +1,28 @@
+---
+import Geo from "../components/Geo.astro";
+const props = {
+  city: "Mansfield",
+  slug: "/mansfield-tx/",
+  title: "Towing in Mansfield, TX | 24/7 Tow Truck & Roadside Help",
+  description: "24/7 towing in Mansfield, TX. Light, heavy, flatbed, and accident-recovery towing plus roadside assistance along US-287, SH-360, and Debbie Lane. Call for an upfront quote.",
+  lead: "Stuck on US-287 or stranded off Debbie Lane? One call gets the nearest tow truck moving across Mansfield, day or night.",
+  intro: [
+    "Mansfield sits south of Grand Prairie and Arlington, a fast-growing suburb where SH-360 and US-287 carry steady commuter traffic. New neighborhoods, busy retail along Debbie Lane and Broad Street, and a historic downtown all share the same roads, and a breakdown on any of them needs a quick response. A dispatcher answers any hour, sends the nearest available operator, and gives you a straight arrival time for your exact spot.",
+    "Calls come from all over town: a no-start in a shopping-center lot, a flat on Matlock Road, a wreck where SH-360 meets US-287, a dead battery outside Methodist Mansfield Medical Center. Tell the dispatcher the vehicle and the problem and the right truck heads out, matched to what you are driving.",
+    "You get the price first, on the phone, before a truck rolls, based on the distance, the vehicle, and the service. No surprise fees when the vehicle comes off the truck.",
+  ],
+  roads: ["US-287", "SH-360", "Debbie Ln", "Broad St", "Matlock Rd", "Heritage Pkwy", "Lone Star Rd", "FM-157 / Main St"],
+  whyHeading: "Towing for a Growing Mansfield",
+  why: [
+    "Growth has put more cars on Mansfield's roads, and the commuter routes north to Arlington and Grand Prairie can back up fast. Operators are dispatched across the city and the highways that connect it to the rest of the metroplex, so a stranded vehicle on US-287 or a quiet neighborhood street gets the same quick, honest response.",
+    "One call covers a tow, a recovery, or a roadside fix anywhere in Mansfield. Keep the number saved so the day a breakdown happens, all you have to do is call.",
+  ],
+  faqs: [
+    { q: "How fast can a tow truck reach me in Mansfield?", a: "The nearest available truck is dispatched as soon as you call, with an honest arrival window for your spot. Times vary with traffic and weather, especially along US-287 and SH-360." },
+    { q: "Do you cover all of Mansfield?", a: "Yes. Coverage runs from downtown and the Debbie Lane retail corridor to the newer neighborhoods on the south and east sides, plus the highways through town." },
+    { q: "Can you tow on US-287 and SH-360?", a: "Yes. Operators reach the highways through Mansfield. Give the dispatcher your direction of travel and the nearest exit or cross street so the truck finds you fast." },
+    { q: "What does a tow cost in Mansfield?", a: "It depends on the distance, the vehicle, and the service. You get a clear quote on the phone before a truck is dispatched, so you hear the number first." },
+  ],
+};
+---
+<Geo {...props} />

@@ -1,0 +1,33 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE, SERVICES } from "../lib/site.js";
+const tel = "tel:" + SITE.phoneTel;
+---
+<Base
+  title="Page Not Found | Grand Prairie Tow Truck"
+  description="That page could not be found. Call Grand Prairie Tow Truck 24/7 for fast towing and roadside help, or jump back to the services and area pages."
+  path="/404/">
+  <section class="hero solo">
+    <span class="hero-scrim" aria-hidden="true" style="background:var(--paper)"></span>
+    <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span> 404 · Grand Prairie, TX</span>
+    <h1>This Road's a <em>Dead End</em></h1>
+    <p class="lead">The page you were after is not here. But a tow truck still is, any hour.</p>
+    <div class="cta-row">
+      <a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a>
+      <a class="btn btn-ghost btn-lg" href="/">Back to home</a>
+    </div>
+  </div></section>
+  <section><div class="wrap">
+    <div class="section-head"><span class="eyebrow">Try one of these</span><h2>Towing Services</h2></div>
+    <div class="fleet">
+      {SERVICES.map((s) => (
+        <a class="svc-card" href={s.url}>
+          <div class="svc-top"><span class="svc-ic"><svg><use href={"#" + s.icon}/></svg></span><span class="svc-tag">{s.klass}</span></div>
+          <h3>{s.name}</h3><p>{s.blurb}</p>
+          <span class="more">View service <svg><use href="#i-arrow"/></svg></span>
+        </a>
+      ))}
+    </div>
+  </div></section>
+</Base>

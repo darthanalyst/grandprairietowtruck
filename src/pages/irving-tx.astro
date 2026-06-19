@@ -1,0 +1,28 @@
+---
+import Geo from "../components/Geo.astro";
+const props = {
+  city: "Irving",
+  slug: "/irving-tx/",
+  title: "Towing in Irving, TX | 24/7 Tow Truck & Roadside Help",
+  description: "24/7 towing in Irving, TX. Light, heavy, flatbed, and accident-recovery towing plus roadside assistance around Las Colinas, DFW Airport, and the SH-114 / SH-183 corridors.",
+  lead: "Broken down in Las Colinas or stuck near the airport? One call gets the nearest tow truck rolling across Irving, any hour.",
+  intro: [
+    "Irving sits just north of Grand Prairie across the President George Bush Turnpike, and it runs at a fast pace. Between the Las Colinas business district, the edge of DFW Airport, the Toyota Music Factory, and a web of state highways, there is always traffic moving and always a chance of a breakdown in the middle of it. A dispatcher answers any hour, sends the nearest available operator, and gives you an honest arrival time for your exact location.",
+    "Calls here come from office lots in Las Colinas, the airport approaches, a stall on SH-114 or Airport Freeway, or a flat on MacArthur Boulevard. Tell the dispatcher what you are driving and what happened, and the matching truck heads out, a wheel-lift or flatbed for a car, a heavy wrecker for something larger.",
+    "The price comes first, on the phone, before a truck rolls, based on the distance, the vehicle, and the service. You decide with the number in hand and a truck already on the way.",
+  ],
+  roads: ["SH-114", "SH-183 / Airport Fwy", "SH-161 / PGBT", "Loop 12", "MacArthur Blvd", "O'Connor Rd", "Belt Line Rd", "Irving Blvd"],
+  whyHeading: "Towing Around Las Colinas & DFW",
+  why: [
+    "The airport and the business district set the rhythm in Irving. Time-sensitive trips, rental returns, and commuter traffic mean a stranded vehicle needs a quick, clean response. Operators are dispatched across the city and the highways that tie Irving to Grand Prairie and the rest of the metroplex, so help can reach the office park or the freeway shoulder fast.",
+    "One call covers a tow, a recovery, or a quick roadside fix anywhere in Irving. Save the number now and the choice is already made the day you need it.",
+  ],
+  faqs: [
+    { q: "Can you tow near DFW Airport?", a: "Yes. Operators are dispatched to the Irving side of the airport and the surrounding highways. Give the dispatcher your exact location, since airport approaches and access roads can be tricky to describe." },
+    { q: "Do you cover Las Colinas?", a: "Yes. Coverage runs across the Las Colinas business district and Lake Carolyn area, plus the rest of Irving. Tell the dispatcher the building or cross streets and the truck routes to you." },
+    { q: "How fast can a tow truck reach me in Irving?", a: "The nearest available truck is dispatched as soon as you call, with an honest arrival window. Times vary with traffic and weather, especially near the airport and SH-114." },
+    { q: "What vehicles can you tow in Irving?", a: "Cars, SUVs, and pickups, plus box trucks, buses, and loaded commercial rigs with the right heavy wrecker. Lowered and non-running vehicles ride on a flatbed." },
+  ],
+};
+---
+<Geo {...props} />

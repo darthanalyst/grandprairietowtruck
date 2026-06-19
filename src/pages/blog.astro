@@ -1,0 +1,40 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE, breadcrumb } from "../lib/site.js";
+const tel = "tel:" + SITE.phoneTel;
+const posts = [
+  { url:"/roadside-assistance-towing-your-guide-to-reliable-quick-help-when-you-need-it-most-2/", title:"Roadside Assistance Towing: Your Guide to Quick Help", dek:"What roadside assistance covers, when a problem needs a tow instead, and how to get help fast when you are stuck.", tag:"Guide" },
+];
+const schema = [ breadcrumb([{ name:"Home", url:"/" }, { name:"Blog", url:"/blog/" }]) ];
+---
+<Base
+  title="Grand Prairie Tow Truck Blog | Towing & Roadside Tips"
+  description="Towing, roadside, and breakdown tips from Grand Prairie Tow Truck, serving Grand Prairie, TX and the 75050 area. Practical help for when your vehicle lets you down."
+  path="/blog/" schema={schema}>
+  <div class="wrap"><nav class="crumbs"><a href="/">Home</a> / Blog</nav></div>
+  <section class="hero solo">
+    <img class="hero-img" src="/images/hero-geo.webp" alt="Towing and roadside tips for Grand Prairie, TX drivers" width="1600" height="900" loading="eager" decoding="async" />
+    <span class="hero-scrim" aria-hidden="true"></span>
+    <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span> Tips &amp; guides</span>
+    <h1>Grand Prairie Towing <em>Blog</em></h1>
+    <p class="lead">Practical towing and roadside tips for Grand Prairie drivers, for the moments your vehicle lets you down.</p>
+  </div></section>
+  <section><div class="wrap narrow">
+    <div class="fleet" style="grid-template-columns:1fr">
+      {posts.map((p) => (
+        <a class="svc-card" href={p.url}>
+          <div class="svc-top"><span class="svc-ic"><svg><use href="#i-route"/></svg></span><span class="svc-tag">{p.tag}</span></div>
+          <h3>{p.title}</h3><p>{p.dek}</p>
+          <span class="more">Read the guide <svg><use href="#i-arrow"/></svg></span>
+        </a>
+      ))}
+    </div>
+  </div></section>
+  <section class="callband"><div class="wrap">
+    <h2>Need a Tow Right Now?</h2>
+    <div class="num"><a href={tel}>{SITE.phoneDisplay}</a></div>
+    <p>Open 24 hours · Grand Prairie, TX 75050 / 75051 / 75052</p>
+    <div style="margin-top:18px"><a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call Now</a></div>
+  </div></section>
+</Base>

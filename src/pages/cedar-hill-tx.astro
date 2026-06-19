@@ -1,0 +1,28 @@
+---
+import Geo from "../components/Geo.astro";
+const props = {
+  city: "Cedar Hill",
+  slug: "/cedar-hill-tx/",
+  title: "Towing in Cedar Hill, TX | 24/7 Tow Truck & Roadside Help",
+  description: "24/7 towing in Cedar Hill, TX. Light, heavy, flatbed, and accident-recovery towing plus roadside assistance along US-67, FM-1382, and near Joe Pool Lake. Upfront pricing.",
+  lead: "Broken down on US-67 or out near Joe Pool Lake? One call gets the nearest tow truck rolling across Cedar Hill, any hour.",
+  intro: [
+    "Cedar Hill sits at the southwest corner of the area, where the land rises into the hills above Joe Pool Lake and Cedar Hill State Park. US-67 carries the commuter traffic toward Dallas, FM-1382 winds past the lake and the state park, and the hills mean grades and curves that a stranded driver would rather not wait on. A dispatcher answers any hour, sends the nearest available operator, and gives you an honest arrival time for your exact spot.",
+    "Calls come from the Uptown Village shopping area, the neighborhoods off Pleasant Run Road, the lake roads near the state park, and the US-67 corridor. Tell the dispatcher what you are driving and what happened, and the matching truck heads out, a wheel-lift or flatbed for a car, a heavy wrecker for something larger.",
+    "The price comes first, on the phone, before a truck rolls, based on the distance, the vehicle, and the service. You decide with the number in hand and a truck on the way.",
+  ],
+  roads: ["US-67", "FM-1382 / Belt Line Rd", "Mansfield Rd", "Pleasant Run Rd", "Cedar Hill Rd", "Straus Rd", "Wintergreen Rd"],
+  whyHeading: "Towing for Cedar Hill & the Lake",
+  why: [
+    "The hills and the lake make Cedar Hill its own kind of tow call. Grades along US-67 and the winding roads near Cedar Hill State Park and Dogwood Canyon are no place to sit with a dead vehicle, so a quick response matters. Operators are dispatched across the city and the routes that connect it to Grand Prairie and the rest of the metroplex.",
+    "Whether you are at Uptown Village, on a lake road, or on the highway toward Dallas, one call covers a tow, a recovery, or a roadside fix. Save the number now so the decision is already made when you need it.",
+  ],
+  faqs: [
+    { q: "Can you reach me near Joe Pool Lake or the state park?", a: "Yes. Operators are dispatched to the lake roads and the area around Cedar Hill State Park. Give the dispatcher the nearest landmark or cross street, since some of the park and lake roads are easy to mix up." },
+    { q: "How fast is a tow in Cedar Hill?", a: "The nearest available truck is sent as soon as you call, with an honest arrival window for your spot. Times vary with traffic, weather, and the hilly roads on the southwest side." },
+    { q: "Do you tow on US-67 through Cedar Hill?", a: "Yes. Operators reach the US-67 corridor and the connecting highways. Give the dispatcher your direction of travel and the nearest exit so the truck finds you quickly." },
+    { q: "What vehicles can you tow in Cedar Hill?", a: "Cars, SUVs, and pickups, plus box trucks, buses, and loaded rigs with the right heavy wrecker. Lowered and non-running vehicles ride on a flatbed." },
+  ],
+};
+---
+<Geo {...props} />
