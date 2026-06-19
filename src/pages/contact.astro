@@ -1,0 +1,57 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE, AREAS, breadcrumb } from "../lib/site.js";
+const tel = "tel:" + SITE.phoneTel;
+const schema = [ breadcrumb([{ name:"Home", url:"/" }, { name:"Contact", url:"/contact/" }]) ];
+---
+<Base
+  title="Contact Grand Prairie Tow Truck | Call 24/7"
+  description="Contact Grand Prairie Tow Truck for fast 24/7 towing and roadside help in Grand Prairie, TX. Call (469) 916-5341 any hour for a truck and an upfront quote."
+  path="/contact/" schema={schema}>
+  <div class="wrap"><nav class="crumbs"><a href="/">Home</a> / Contact</nav></div>
+  <section class="hero solo">
+    <img class="hero-img" src="/images/hero-home.webp" alt="Call Grand Prairie Tow Truck dispatch 24/7 for a tow truck in Grand Prairie, TX" width="1600" height="900" loading="eager" decoding="async" />
+    <span class="hero-scrim" aria-hidden="true"></span>
+    <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span> 24/7 dispatch · Grand Prairie, TX</span>
+    <h1>Contact Grand Prairie <em>Tow Truck</em></h1>
+    <p class="lead">The fastest way to reach us is a phone call. A live dispatcher answers any hour, day or night, and gets a truck moving.</p>
+    <div class="cta-row"><a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a></div>
+  </div></section>
+  <div class="readout"><div class="wrap">
+    <div class="read-cell"><span class="k">Phone</span><span class="v">{SITE.phoneDisplay}</span></div>
+    <div class="read-cell"><span class="k">Hours</span><span class="v"><em>Open 24/7</em></span></div>
+    <div class="read-cell"><span class="k">Serving</span><span class="v">Grand Prairie +</span></div>
+    <div class="read-cell"><span class="k">Response</span><span class="v">~20 min</span></div>
+  </div></div>
+  <section><div class="wrap"><div class="feature">
+    <div>
+      <span class="eyebrow">How to reach us</span>
+      <h2>One Call Gets a Truck Moving</h2>
+      <p>Towing is time-sensitive, so calling is always fastest. When you call, have your location, the vehicle you are driving, and a short description of what happened ready. The dispatcher pulls up the nearest truck, gives you an honest arrival window, and quotes the job upfront before anything rolls.</p>
+      <ul class="checks">
+        <li><svg><use href="#i-check"/></svg> A live dispatcher answers 24 hours a day</li>
+        <li><svg><use href="#i-check"/></svg> Upfront pricing before a truck is dispatched</li>
+        <li><svg><use href="#i-check"/></svg> Service across Grand Prairie and the 75050 / 75051 / 75052 area</li>
+      </ul>
+      <p class="mono-tiny" style="margin-top:14px">Email (non-urgent): <a href={"mailto:"+SITE.email}>{SITE.email}</a></p>
+    </div>
+    <div class="panel">
+      <h3>Call dispatch now</h3>
+      <p>Available 24 hours, 7 days a week, including nights, weekends, and holidays.</p>
+      <div style="font-family:var(--disp);font-weight:800;font-size:1.9rem;margin:12px 0"><a href={tel} style="color:#fff">{SITE.phoneDisplay}</a></div>
+      <a class="btn btn-call btn-block" href={tel}><svg><use href="#i-phone"/></svg> Tap to Call</a>
+      <p class="mono-tiny" style="margin-top:14px;color:#828c97">Prefer to read first? See <a href="/services/" style="color:#fff">all services</a> or the <a href="/about/" style="color:#fff">about page</a>.</p>
+    </div>
+  </div></div></section>
+  <section class="bg-paper2"><div class="wrap">
+    <div class="section-head"><span class="eyebrow">Service area</span><h2>Cities We Cover</h2><p>Based in Grand Prairie and reaching across the mid-cities between Dallas and Fort Worth.</p></div>
+    <div class="chips">{AREAS.map((a) => <a class="chip" href={a.url}><svg><use href="#i-pin"/></svg> {a.name}, TX</a>)}</div>
+  </div></section>
+  <section class="callband"><div class="wrap">
+    <h2>Need a Tow Right Now?</h2>
+    <div class="num"><a href={tel}>{SITE.phoneDisplay}</a></div>
+    <p>Open 24 hours · Grand Prairie, TX 75050 / 75051 / 75052</p>
+    <div style="margin-top:18px"><a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call Now</a></div>
+  </div></section>
+</Base>

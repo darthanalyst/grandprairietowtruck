@@ -1,0 +1,28 @@
+---
+import Geo from "../components/Geo.astro";
+const props = {
+  city: "Arlington",
+  slug: "/arlington-tx/",
+  title: "Towing in Arlington, TX | 24/7 Tow Truck & Roadside Help",
+  description: "24/7 towing in Arlington, TX. Light, heavy, flatbed, and accident-recovery towing plus roadside assistance near AT&T Stadium, UT Arlington, and the I-20 / I-30 corridors.",
+  lead: "Stranded near the stadiums or stuck on Cooper Street? One call gets the nearest tow truck moving across Arlington, day or night.",
+  intro: [
+    "Arlington sits right next door to Grand Prairie, and the two cities share the same busy corridors. Between AT&T Stadium, Globe Life Field, Six Flags, and the entertainment district, traffic here swings from empty to packed in an afternoon, and a breakdown in the middle of it is no fun. A dispatcher answers any hour, sends the nearest available operator, and gives you a straight arrival time for wherever you are stuck.",
+    "Calls come from all over the city: a no-start in a stadium lot on game day, a flat on Cooper Street, a wreck on the I-20 and SH-360 interchange, a dead battery near UT Arlington. Tell the dispatcher the vehicle and the problem and the right truck heads out, from a wheel-lift for a sedan to a heavy wrecker for a loaded rig.",
+    "You hear the price before a truck rolls, based on the distance, the vehicle, and the service. No vague estimate that grows at drop-off, just a clear number and a truck on the way.",
+  ],
+  roads: ["I-20", "I-30", "SH-360", "Cooper St", "Collins St", "Division St / SH-180", "Lamar Blvd", "Matlock Rd"],
+  whyHeading: "Towing That Knows Arlington Traffic",
+  why: [
+    "Event traffic is the wild card in Arlington. A tow on a normal Tuesday and a tow during a Cowboys or Rangers game are different jobs, and knowing the routes around the stadiums and the I-30 corridor keeps the wait shorter. Operators are dispatched across the city and the highways that connect it to Grand Prairie and the wider mid-cities.",
+    "Whether you are near the university, the entertainment district, or a quiet street on the south side, one call covers a tow, a recovery, or a quick roadside fix. Keep the number saved so the decision is already made when the day goes sideways.",
+  ],
+  faqs: [
+    { q: "Can you reach me near AT&T Stadium on a game day?", a: "Yes. Operators are dispatched across Arlington including the stadium and entertainment district. On a busy event day, give the dispatcher your exact lot or cross streets so the truck can route around the traffic." },
+    { q: "How fast is a tow in Arlington?", a: "The nearest available truck is sent as soon as you call, with an honest arrival window for your spot. Times vary with traffic, weather, and events, but the goal is always the fastest safe response." },
+    { q: "Do you tow on the interstates through Arlington?", a: "Yes. Operators reach I-20, I-30, and SH-360 through the city. Give the dispatcher your direction of travel and the nearest exit or mile marker so the truck finds you fast." },
+    { q: "What kinds of vehicles can you tow in Arlington?", a: "Cars, SUVs, and pickups, plus heavier box trucks, buses, and loaded rigs with the right wrecker. Lowered and non-running vehicles ride on a flatbed." },
+  ],
+};
+---
+<Geo {...props} />

@@ -1,0 +1,52 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE, SERVICES, itemListNode, breadcrumb } from "../lib/site.js";
+const tel = "tel:" + SITE.phoneTel;
+const schema = [ itemListNode(SERVICES), breadcrumb([{ name:"Home", url:"/" }, { name:"Services", url:"/services/" }]) ];
+---
+<Base
+  title="Towing Services in Grand Prairie, TX | 24/7 Tow Truck"
+  description="Towing services in Grand Prairie, TX: emergency, flatbed, light-duty, heavy-duty, accident recovery, long-distance towing, and roadside assistance. Call 24/7 for an upfront quote."
+  path="/services/" schema={schema}>
+  <div class="wrap"><nav class="crumbs"><a href="/">Home</a> / Services</nav></div>
+  <section class="hero solo">
+    <img class="hero-img" src="/images/hero-services.webp" alt="Towing and recovery services in Grand Prairie, TX" width="1600" height="900" loading="eager" decoding="async" />
+    <span class="hero-scrim" aria-hidden="true"></span>
+    <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span> Services · Grand Prairie, TX</span>
+    <h1>Towing &amp; Recovery <em>Services</em></h1>
+    <p class="lead">One number for every kind of tow, from a dead battery to a loaded rig. Tell dispatch what you are driving and the right truck rolls out.</p>
+    <div class="cta-row"><a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a></div>
+  </div></section>
+  <div class="readout"><div class="wrap">
+    <div class="read-cell"><span class="k">Dispatch</span><span class="v"><em>24/7</em></span></div>
+    <div class="read-cell"><span class="k">Typical arrival</span><span class="v">~20 min</span></div>
+    <div class="read-cell"><span class="k">Trucks</span><span class="v">Light–Heavy</span></div>
+    <div class="read-cell"><span class="k">Pricing</span><span class="v">Upfront</span></div>
+  </div></div>
+  <section><div class="wrap">
+    <div class="section-head"><span class="eyebrow">The full menu</span><h2>What the Local Network Handles</h2><p>Every service below runs on the same 24/7 dispatch and the same upfront pricing. Pick the one that fits, or just call and describe the situation.</p></div>
+    <div class="fleet">
+      {SERVICES.map((s) => (
+        <a class="svc-card" href={s.url}>
+          <div class="svc-top"><span class="svc-ic"><svg><use href={"#" + s.icon}/></svg></span><span class="svc-tag">{s.klass}</span></div>
+          <h3>{s.name}</h3><p>{s.blurb}</p>
+          <span class="more">View service <svg><use href="#i-arrow"/></svg></span>
+        </a>
+      ))}
+    </div>
+  </div></section>
+  <section class="bg-paper2"><div class="wrap narrow">
+    <div class="section-head"><span class="eyebrow">Not sure which you need?</span><h2>Just Describe What Happened</h2></div>
+    <div class="prose">
+    <p>You do not have to know the exact service name. Tell the dispatcher where the vehicle is, what you are driving, and what went wrong, and the right truck is matched to the job. A no-start might be a quick <a href="/roadside-assistance-in-grand-prairie/">roadside</a> jump rather than a tow. A lowered car gets a <a href="/flatbed-towing-in-grand-prairie/">flatbed</a>. A wreck blocking a lane gets <a href="/emergency-towing-in-grand-prairie/">emergency</a> dispatch and, if needed, <a href="/accident-recovery-in-grand-prairie/">accident recovery</a>.</p>
+    <p>Whatever the situation, you get an honest arrival window and a clear price on the phone before a truck rolls. One call sorts it.</p>
+    </div>
+  </div></section>
+  <section class="callband"><div class="wrap">
+    <h2>One Call Puts a Truck on the Way</h2>
+    <div class="num"><a href={tel}>{SITE.phoneDisplay}</a></div>
+    <p>Open 24 hours · Grand Prairie, TX 75050 / 75051 / 75052</p>
+    <div style="margin-top:18px"><a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call Now</a></div>
+  </div></section>
+</Base>

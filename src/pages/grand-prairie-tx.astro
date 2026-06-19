@@ -1,0 +1,29 @@
+---
+import Geo from "../components/Geo.astro";
+const props = {
+  city: "Grand Prairie",
+  slug: "/grand-prairie-tx/",
+  title: "Towing in Grand Prairie, TX | 24/7 Tow Truck & Recovery",
+  description: "24/7 towing in Grand Prairie, TX. Light, heavy, flatbed, and accident-recovery towing plus roadside help across the 75050 area and the I-20, I-30, and SH-360 corridors.",
+  lead: "From the lakes near Joe Pool to the warehouses off I-20, one call puts the right tow truck on the way across Grand Prairie, any hour.",
+  heroImg: "/images/hero-home.webp",
+  intro: [
+    "Grand Prairie spreads a long way between Dallas and Fort Worth, and that shape changes how a tow call goes. The city runs from the lakeside neighborhoods near Joe Pool Lake and Lynn Creek Park in the south, up through the residential blocks off Carrier Parkway and Belt Line Road, into one of the largest industrial and warehouse districts in the country in the north. Wherever you are stranded, a dispatcher answers, sends the nearest available operator, and gives you an honest arrival window for your exact spot.",
+    "That mix of neighborhoods, lakes, entertainment venues, and heavy industry means no two calls are the same. A dead battery at Lone Star Park or Traders Village just needs a jump. A lowered car off SH-161 needs a flatbed. A loaded box truck near the Great Southwest district needs a heavy wrecker. Describe what you are driving and what happened, and the truck is matched to the job.",
+    "The promise is the same across all of it: pick up fast, quote you straight, and get a truck rolling. You hear the price on the phone before anything is dispatched, based on the distance, the vehicle, and the service, with no surprise fees when the vehicle comes off the truck.",
+  ],
+  roads: ["I-20", "I-30", "SH-360", "SH-161 / PGBT", "SH-303 / Pioneer Pkwy", "Carrier Pkwy", "Belt Line Rd", "Great Southwest Pkwy"],
+  whyHeading: "Local Towing Built Around Grand Prairie",
+  why: [
+    "Knowing the city saves time when minutes matter. Operators are dispatched across the 75050, 75051, 75052, and 75054 ZIP codes, from the entertainment district around Epic Waters and the Premium Outlets to the industrial corridors that feed I-20 and SH-360. The interstates and the President George Bush Turnpike move fast, so a stranded vehicle on the shoulder needs a truck that knows the route and can reach it quickly.",
+    "Keep the number saved before you need it. When a breakdown happens, one call covers a tow, a recovery, or a quick roadside fix, and you are never starting over with a second phone call if the problem turns out bigger than it looked.",
+  ],
+  faqs: [
+    { q: "How fast can a tow truck reach me in Grand Prairie?", a: "The nearest available truck is dispatched the moment you call, and you get an honest arrival window for your exact spot. Across Grand Prairie and the 75050 area that often lands around 15 to 25 minutes, depending on traffic, weather, and location." },
+    { q: "Do you cover the whole city, north to south?", a: "Yes. Coverage runs from the lakeside south near Joe Pool Lake up through the central neighborhoods to the industrial district in the north, plus the interstates and state highways that thread the city." },
+    { q: "Can you tow commercial and heavy vehicles here?", a: "Yes. Along with cars and SUVs, the network covers box trucks, buses, and loaded rigs common around the Great Southwest Industrial District, matched with a heavy-duty wrecker for the weight." },
+    { q: "What does a tow cost in Grand Prairie?", a: "It depends on the distance, the vehicle, and the service. You get a clear quote on the phone before a truck is dispatched, so you hear the number first and then decide." },
+  ],
+};
+---
+<Geo {...props} />
