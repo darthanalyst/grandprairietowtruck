@@ -1,0 +1,46 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE, breadcrumb } from "../lib/site.js";
+const tel = "tel:" + SITE.phoneTel;
+const schema = [ breadcrumb([{ name:"Home", url:"/" }, { name:"About", url:"/about/" }]) ];
+---
+<Base
+  title="About Grand Prairie Tow Truck | How It Works"
+  description="Grand Prairie Tow Truck is a free service that connects drivers with local 24/7 towing and roadside providers across Grand Prairie, TX and the mid-cities. Here is how it works."
+  path="/about/" schema={schema}>
+  <div class="wrap"><nav class="crumbs"><a href="/">Home</a> / About</nav></div>
+  <section class="hero solo">
+    <img class="hero-img" src="/images/hero-services.webp" alt="Tow trucks ready for 24/7 dispatch in Grand Prairie, TX" width="1600" height="900" loading="eager" decoding="async" />
+    <span class="hero-scrim" aria-hidden="true"></span>
+    <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span> About · Grand Prairie, TX</span>
+    <h1>One Call, the <em>Right Truck</em></h1>
+    <p class="lead">Grand Prairie Tow Truck connects drivers with local towing and roadside providers, fast, any hour, with an honest price up front.</p>
+    <div class="cta-row"><a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a></div>
+  </div></section>
+  <div class="readout"><div class="wrap">
+    <div class="read-cell"><span class="k">Dispatch</span><span class="v"><em>24/7</em></span></div>
+    <div class="read-cell"><span class="k">Coverage</span><span class="v">GP + 4 cities</span></div>
+    <div class="read-cell"><span class="k">Pricing</span><span class="v">Upfront</span></div>
+    <div class="read-cell"><span class="k">Trucks</span><span class="v">Light–Heavy</span></div>
+  </div></div>
+  <section><div class="wrap narrow">
+    <div class="section-head"><span class="eyebrow">What we do</span><h2>A Faster Way to Reach a Tow Truck</h2></div>
+    <div class="prose">
+    <p>Grand Prairie Tow Truck is a free service that helps drivers connect with local towing and roadside providers across Grand Prairie, TX and the surrounding mid-cities. When you call, a dispatcher takes your location, the vehicle you are driving, and a short description of what happened, then gets the nearest available operator moving toward you. The work is done by independent local providers, and the job of this service is to make that connection fast and simple when you are stuck.</p>
+    <p>The reason to use one number is that towing is rarely one-size-fits-all. A lowered car needs a flatbed, a loaded box truck needs a heavy wrecker, and a dead battery just needs a jump. Instead of calling around and explaining your situation three times, you describe it once and the right truck is matched to the job. That saves time on the worst kind of day.</p>
+    <h2>How a call works</h2>
+    <p>Calling is always the fastest route, because towing is time-sensitive. Have three things ready when you call: where the vehicle is, what you are driving, and what happened. With those, the dispatcher can give you an honest arrival window and a clear, upfront price before any truck rolls. You hear the number first, based on the distance, the vehicle, and the service, and then you decide. There is no obligation in a quote and no surprise fee when the vehicle comes off the truck.</p>
+    <h2>Where we help</h2>
+    <p>Coverage runs across Grand Prairie and the 75050, 75051, 75052, and 75054 area, plus nearby <a href="/arlington-tx/">Arlington</a>, <a href="/irving-tx/">Irving</a>, <a href="/mansfield-tx/">Mansfield</a>, and <a href="/cedar-hill-tx/">Cedar Hill</a>. Operators reach the corridors that thread the mid-cities, including I-20, I-30, SH-360, and the President George Bush Turnpike. For the full menu, see <a href="/services/">all services</a>, from <a href="/light-duty-towing-in-grand-prairie/">light-duty towing</a> to <a href="/heavy-duty-towing-in-grand-prairie/">heavy-duty recovery</a>.</p>
+    <h2>Honest and upfront</h2>
+    <p>Two things matter most when you are stranded: speed and a straight answer. The promise is to pick up fast, quote you honestly, and get a truck moving. Arrival times are real estimates that depend on traffic, weather, and demand, and the price is set before dispatch, not after. That is the whole point of keeping the number saved before you ever need it.</p>
+    </div>
+  </div></section>
+  <section class="callband"><div class="wrap">
+    <h2>Need a Tow Right Now?</h2>
+    <div class="num"><a href={tel}>{SITE.phoneDisplay}</a></div>
+    <p>Open 24 hours · Grand Prairie, TX 75050 / 75051 / 75052</p>
+    <div style="margin-top:18px"><a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call Now</a></div>
+  </div></section>
+</Base>

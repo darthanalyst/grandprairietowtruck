@@ -1,0 +1,39 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE, breadcrumb } from "../lib/site.js";
+const schema = [ breadcrumb([{ name:"Home", url:"/" }, { name:"Privacy Policy", url:"/privacy-policy/" }]) ];
+---
+<Base
+  title="Privacy Policy | Grand Prairie Tow Truck"
+  description="The Grand Prairie Tow Truck privacy policy: what we collect when you call or submit a request, how it is used, and how your information is shared and protected."
+  path="/privacy-policy/" schema={schema}>
+  <div class="wrap"><nav class="crumbs"><a href="/">Home</a> / Privacy Policy</nav></div>
+  <section class="hero solo">
+    <img class="hero-img" src="/images/hero-geo.webp" alt="Grand Prairie Tow Truck privacy policy" width="1600" height="900" loading="eager" decoding="async" />
+    <span class="hero-scrim" aria-hidden="true"></span>
+    <div class="wrap"><span class="eyebrow"><span class="dot"></span> Privacy</span><h1>Privacy <em>Policy</em></h1><p class="mono-tiny">Last updated: January 2026</p></div>
+  </section>
+  <section><div class="wrap narrow">
+    <div class="prose">
+    <p>This Privacy Policy explains how Grand Prairie Tow Truck ("we," "us," or "our") collects, uses, and shares information when you visit grandprairietowtruck.com or contact us by phone or web form. By using the site or contacting us, you agree to the practices described here.</p>
+    <h2>How this service works</h2>
+    <p>Grand Prairie Tow Truck is a free service that helps drivers connect with local towing and roadside service providers. When you call or submit a request, your information may be shared with one or more independent providers, including through our advertising and call-routing partners, so that a provider can respond to your request. The providers are independent businesses, and we do not perform the towing or roadside work ourselves.</p>
+    <h2>Information we collect</h2>
+    <p>When you call or fill out a form, we may collect the information you give us, such as your name, phone number, location, and a description of the help you need. When you browse the site, we and our analytics or advertising partners may automatically collect standard technical data such as your IP address, device and browser type, pages viewed, and referring site, using cookies and similar technologies.</p>
+    <h2>How we use information</h2>
+    <p>We use the information to connect you with a provider who can help, to respond to your request, to operate and improve the website, to measure advertising performance, and to comply with the law. We do not sell your personal information in the everyday sense of the word, though sharing your request with service providers and routing partners is part of how the connection is made.</p>
+    <h2>How information is shared</h2>
+    <p>Your information may be shared with independent towing and roadside providers, with call-routing and advertising partners who help connect you to those providers, with service vendors who help us operate the site, and as required by law or to protect rights and safety. It is your responsibility to verify that any provider you hire carries the license and insurance required for the work.</p>
+    <h2>Cookies and analytics</h2>
+    <p>The site may use cookies and analytics tools to understand how visitors use the pages and to measure marketing. You can control cookies through your browser settings. Disabling cookies may affect how some parts of the site function.</p>
+    <h2>Your choices</h2>
+    <p>You may contact us to ask about the information associated with your request. Depending on where you live, you may have rights to access, correct, or delete certain personal information, or to opt out of certain sharing. To make a request, contact us using the details below.</p>
+    <h2>Children's privacy</h2>
+    <p>The site is intended for adults and is not directed to children under 13. We do not knowingly collect personal information from children.</p>
+    <h2>Changes to this policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes take effect when posted on this page, and the "last updated" date above will reflect the most recent revision.</p>
+    <h2>Contact</h2>
+    <p>Questions about this policy can be sent to <a href={"mailto:"+SITE.email}>{SITE.email}</a> or by calling {SITE.phoneDisplay}.</p>
+    </div>
+  </div></section>
+</Base>

@@ -1,0 +1,45 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+const props = {
+  name: "Accident Recovery",
+  serviceType: "Accident recovery towing",
+  slug: "/accident-recovery-in-grand-prairie/",
+  klass: "Recovery",
+  title: "Accident Recovery Towing in Grand Prairie, TX | 24/7",
+  description: "Accident recovery towing in Grand Prairie, TX. Careful collision cleanup, damage-free loading, and a tow to the body shop you choose. Call 24/7 dispatch.",
+  h1: "Accident Recovery in Grand Prairie, <em>TX</em>",
+  lead: "After a collision, the next call should make things calmer. A truck heads out to clear the scene and move your vehicle with care.",
+  heroImg: "/images/hero-accident.webp",
+  sections: [
+    { h2: "Calm Handling After a Collision", paras: [
+      "A wreck is disorienting, and the minutes after one are stressful. Accident recovery is about bringing order to the scene: getting a damaged vehicle off the road safely, loading it without causing more damage, and towing it to the body shop or yard you choose. Call once you and everyone involved are safe, and a dispatcher sends the nearest operator with the right equipment for the damage.",
+      "Recovery work needs a careful hand. A collision-damaged vehicle may not roll, steer, or brake, so it usually belongs on a flatbed and is winched on rather than driven. The operator handles that loading so the vehicle is not damaged twice.",
+    ]},
+    { h2: "What Accident Recovery Covers", paras: [
+      "From a minor fender-bender to a serious wreck, recovery covers the steps that get your vehicle off the road and where it needs to go:",
+    ], bullets: [
+      "Clearing a damaged vehicle out of a live traffic lane",
+      "Damage-free loading of a car that will not roll or steer",
+      "A tow to the body shop, dealer, or yard you choose",
+      "Cleanup of debris around the vehicle where needed",
+      "Coordination with emergency towing when a scene is urgent",
+    ]},
+    { h2: "Safety First, Then the Tow", paras: [
+      "Before anything else, get yourself and everyone involved to a safe spot away from traffic and call emergency services if anyone is hurt. Switch on your hazard lights so other drivers see the scene early. Once people are safe, the recovery call gets your vehicle handled. The Texas Department of Transportation publishes <a href='https://www.txdot.gov/safety/driving-safely.html' rel='nofollow noopener' target='_blank'>roadside safety guidance</a> worth knowing before you ever need it.",
+      "If the scene is urgent and blocking traffic, the same dispatch covers <a href='/emergency-towing-in-grand-prairie/'>emergency towing</a> to clear it fast, and a heavily damaged or non-running vehicle rides on a <a href='/flatbed-towing-in-grand-prairie/'>flatbed</a> for the trip to the shop.",
+    ]},
+  ],
+  faqs: [
+    { q: "What should I do right after an accident?", a: "Get everyone to a safe spot away from traffic, call emergency services if anyone is hurt, and switch on your hazard lights. Once people are safe, call for recovery and a truck is dispatched to move the vehicle." },
+    { q: "Can you tow a car that was badly damaged?", a: "Yes. A collision-damaged vehicle that cannot roll, steer, or brake is winched onto a flatbed and carried, so it is not damaged further on the way to the shop." },
+    { q: "Will you tow it to my body shop?", a: "Yes. The vehicle goes to the body shop, dealer, or yard you choose. Tell the dispatcher the destination and it is part of the upfront quote." },
+    { q: "Do you handle the scene if it is blocking traffic?", a: "Yes. If the vehicle is in a live lane, the operator works to clear it safely and quickly. For an urgent scene, the same call covers emergency towing to get the road moving again." },
+  ],
+  related: [
+    { name: "Emergency Towing", url: "/emergency-towing-in-grand-prairie/", icon: "i-crash", tag: "Emergency", blurb: "A breakdown or wreck gets the nearest truck dispatched fast." },
+    { name: "Flatbed Towing", url: "/flatbed-towing-in-grand-prairie/", icon: "i-flatbed", tag: "Specialty", blurb: "Damage-free transport for non-running and damaged vehicles." },
+    { name: "Heavy-Duty Towing", url: "/heavy-duty-towing-in-grand-prairie/", icon: "i-truck", tag: "Heavy", blurb: "Box trucks, buses, and loaded rigs with the right heavy wrecker." },
+  ],
+};
+---
+<ServicePage {...props} />

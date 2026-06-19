@@ -1,0 +1,45 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+const props = {
+  name: "Heavy-Duty Towing",
+  serviceType: "Heavy-duty towing",
+  slug: "/heavy-duty-towing-in-grand-prairie/",
+  klass: "Heavy",
+  title: "Heavy-Duty Towing in Grand Prairie, TX | Trucks, Buses & Rigs",
+  description: "Heavy-duty towing in Grand Prairie, TX for box trucks, buses, RVs, and loaded commercial rigs. The right heavy wrecker, 24/7 dispatch, upfront pricing.",
+  h1: "Heavy-Duty Towing in Grand Prairie, <em>TX</em>",
+  lead: "Big vehicles need big equipment. Box trucks, buses, and loaded rigs recovered and towed with the right heavy wrecker for the weight.",
+  heroImg: "/images/hero-heavy-duty.webp",
+  sections: [
+    { h2: "Built for the Heavy Stuff", paras: [
+      "Grand Prairie sits on top of one of the largest industrial and warehouse districts in the country, so the roads here carry a lot of commercial weight. When a box truck breaks down on I-20, a bus stalls on SH-360, or a loaded rig will not move out of the Great Southwest district, a light-duty truck is not the answer. Heavy-duty towing brings the wrecker, the boom, and the rated equipment to move serious tonnage safely.",
+      "Tell the dispatcher the vehicle, the weight, and whether it is loaded. The right heavy unit and an operator who knows how to rig it are sent, so the recovery is done once and done right.",
+    ]},
+    { h2: "Vehicles That Need a Heavy Wrecker", paras: [
+      "Heavy-duty towing covers the rigs and large vehicles a standard truck cannot handle:",
+    ], bullets: [
+      "Box trucks, delivery trucks, and dual-rear-wheel rigs",
+      "Buses, shuttles, and large passenger vans",
+      "RVs, motorhomes, and large trailers",
+      "Loaded commercial vehicles and work trucks",
+      "Equipment and machinery that needs rated recovery gear",
+    ]},
+    { h2: "Recovery, Weight, and an Upfront Number", paras: [
+      "Moving a heavy vehicle is as much about rigging as it is about pulling. The operator sets up the recovery so the load stays balanced, uses rated chains and straps at the right points, and protects the vehicle and the road through the lift. For a commercial operator, getting a rig back on the road or to a repair yard quickly is what keeps the day from falling apart.",
+      "Pricing depends on the vehicle, the weight, the distance, and the recovery involved, and you get a clear number on the phone before the unit rolls. For a passenger vehicle or a standard pickup, <a href='/light-duty-towing-in-grand-prairie/'>light-duty towing</a> is the right call, and a wreck involving a heavy vehicle ties into <a href='/accident-recovery-in-grand-prairie/'>accident recovery</a>.",
+    ]},
+  ],
+  faqs: [
+    { q: "What size vehicles can you tow?", a: "Heavy-duty covers box trucks, buses, RVs, dual-rear-wheel rigs, and loaded commercial vehicles. Give the dispatcher the vehicle type and weight so the right wrecker is matched to the job." },
+    { q: "Can you recover a rig that is off the road?", a: "Yes. Heavy recovery uses rated winches and rigging to bring a heavy vehicle back onto the road safely. Describe the situation and the operator brings the gear to handle it." },
+    { q: "Do you tow loaded commercial trucks?", a: "Yes. A loaded truck can be towed, though the weight and load affect the equipment needed and the price. Let the dispatcher know it is loaded so the right unit is sent." },
+    { q: "How is heavy-duty pricing set?", a: "It depends on the vehicle, the weight, the distance, and any recovery work involved. You get an upfront quote on the phone before the unit is dispatched, so the number is clear from the start." },
+  ],
+  related: [
+    { name: "Accident Recovery", url: "/accident-recovery-in-grand-prairie/", icon: "i-shield", tag: "Recovery", blurb: "Collision cleanup, careful loading, and a tow to your shop." },
+    { name: "Emergency Towing", url: "/emergency-towing-in-grand-prairie/", icon: "i-crash", tag: "Emergency", blurb: "A breakdown or wreck gets the nearest truck dispatched fast." },
+    { name: "Long-Distance Towing", url: "/long-distance-towing-in-grand-prairie/", icon: "i-route", tag: "Long-Haul", blurb: "Out-of-town hauls across Texas, quoted upfront and secured." },
+  ],
+};
+---
+<ServicePage {...props} />

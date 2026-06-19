@@ -1,0 +1,45 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+const props = {
+  name: "Long-Distance Towing",
+  serviceType: "Long-distance towing",
+  slug: "/long-distance-towing-in-grand-prairie/",
+  klass: "Long-Haul",
+  title: "Long-Distance Towing in Grand Prairie, TX | Out-of-Town Hauls",
+  description: "Long-distance towing from Grand Prairie, TX. Out-of-town and across-Texas hauls quoted upfront, your vehicle secured the whole way. Call 24/7 dispatch.",
+  h1: "Long-Distance Towing in Grand Prairie, <em>TX</em>",
+  lead: "Moving a vehicle a long way is about doing it once, safely. Out-of-town hauls quoted upfront, with your vehicle secured start to finish.",
+  heroImg: "/images/hero-geo.webp",
+  sections: [
+    { h2: "When the Destination Is Out of Town", paras: [
+      "Sometimes a tow does not end at the nearest shop. A car that broke down on a road trip needs to get home, a vehicle sale needs delivery to another city, or a move means a non-running car has to travel across the state. Long-distance towing handles those hauls: a flatbed or the right truck, a secured load, and a price quoted upfront for the whole trip so there are no surprises at the far end.",
+      "Tell the dispatcher where the vehicle is and where it needs to go. The route, the vehicle, and the distance set the quote, and you hear the number before anything is loaded.",
+    ]},
+    { h2: "Why Long Hauls Need the Right Setup", paras: [
+      "A long tow puts more time and miles on the load, so how the vehicle is secured matters even more. For most long-distance moves a flatbed is the right choice, keeping all four wheels off the road so the drivetrain and tires take no wear over the distance. Long-distance towing is the right call when you have:",
+    ], bullets: [
+      "A vehicle that broke down far from home and needs to get back",
+      "A car bought or sold that needs delivery to another city",
+      "A non-running or project vehicle moving across Texas",
+      "A relocation that includes a vehicle you cannot drive",
+      "Any haul beyond the local metroplex that needs a firm price",
+    ]},
+    { h2: "One Quote, Secured the Whole Way", paras: [
+      "The value of a long-distance tow is a single, clear price and a vehicle that arrives in the same shape it left. The load is strapped down at the right points, checked before the trip, and carried to the destination you name. Whether it is the next county or the far side of the state, you get the number upfront and the vehicle secured for the distance.",
+      "For a shorter move inside the area, <a href='/light-duty-towing-in-grand-prairie/'>light-duty towing</a> covers it, and a lowered or non-running vehicle rides on a <a href='/flatbed-towing-in-grand-prairie/'>flatbed</a> whether the trip is across town or across Texas.",
+    ]},
+  ],
+  faqs: [
+    { q: "How far will you tow a vehicle?", a: "Local hops, runs across the DFW metroplex, and longer hauls across Texas are all covered. Tell the dispatcher the destination and the haul is quoted upfront for the full distance." },
+    { q: "Is a long-distance tow priced differently?", a: "Yes. A long haul is quoted on the route, the distance, and the vehicle, with the full price given on the phone before anything is loaded. You hear one number for the whole trip." },
+    { q: "Will my car be safe over a long tow?", a: "Yes. For most long-distance moves the vehicle rides on a flatbed with all four wheels off the road, strapped at the correct points and checked before the trip, so it arrives in the same shape it left." },
+    { q: "Can you move a non-running vehicle long distance?", a: "Yes. A non-running or project vehicle is winched onto the bed and secured for the distance, so it does not need to start or steer for the haul." },
+  ],
+  related: [
+    { name: "Flatbed Towing", url: "/flatbed-towing-in-grand-prairie/", icon: "i-flatbed", tag: "Specialty", blurb: "Damage-free transport for lowered, AWD, and non-running vehicles." },
+    { name: "Light-Duty Towing", url: "/light-duty-towing-in-grand-prairie/", icon: "i-car", tag: "Light", blurb: "Cars, SUVs, and pickups towed on a wheel-lift or flatbed." },
+    { name: "Heavy-Duty Towing", url: "/heavy-duty-towing-in-grand-prairie/", icon: "i-truck", tag: "Heavy", blurb: "Box trucks, buses, and loaded rigs with the right heavy wrecker." },
+  ],
+};
+---
+<ServicePage {...props} />
